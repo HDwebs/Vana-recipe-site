@@ -1,0 +1,136 @@
+---
+layout: base.njk
+title: VANA Recipe Library
+---
+<section class="hero">
+  <div class="wrap">
+    <h1><span class="gradient-text">Recipe</span> Library</h1>
+    <p>Search and filter the VANA recipe collection by meal type, diet, and calories.</p>
+  </div>
+</section>
+
+{% if collections.featuredRecipe.length %}
+{% set f = collections.featuredRecipe[0].data %}
+<section class="featured-section">
+  <div class="wrap">
+    <a href="{{ collections.featuredRecipe[0].url }}" class="featured-card">
+      <div class="featured-media">
+        <span class="featured-badge">This Week's Pick</span>
+        {% if f.image %}<img src="{{ f.image }}" alt="{{ f.title }}">{% endif %}
+      </div>
+      <div class="featured-body">
+        <div class="eyebrow">{% if f.mealType.length %}{{ f.mealType[0] | titleCase }}{% endif %}</div>
+        <h2>{{ f.title }}</h2>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>{{ f.calories }}</strong> kcal</span>
+          <span class="macro-pill"><strong>{{ f.protein }}g</strong> pro</span>
+          <span class="macro-pill"><strong>{{ f.carbs }}g</strong> carb</span>
+          <span class="macro-pill"><strong>{{ f.fat }}g</strong> fat</span>
+        </div>
+        <div class="tag-row">{% for t in f.diet %}<span class="tag">{{ t | titleCase }}</span>{% endfor %}</div>
+      </div>
+    </a>
+  </div>
+</section>
+{% endif %}
+
+{% if collections.recentRecipes.length %}
+<section class="recent-section">
+  <div class="wrap">
+    <div class="section-title">Recently Added</div>
+    <div class="recent-strip">
+      {% for recipe in collections.recentRecipes %}
+      {% set r = recipe.data %}
+      <a href="{{ recipe.url }}" class="recent-card">
+        <div class="card-media">
+          <span class="new-badge">New</span>
+          {% if r.image %}<img src="{{ r.image }}" alt="{{ r.title }}" loading="lazy">{% else %}<span class="placeholder-mark">VANA</span>{% endif %}
+        </div>
+        <div class="card-body">
+          <div class="card-title">{{ r.title }}</div>
+          <div class="macro-row">
+            <span class="macro-pill"><strong>{{ r.calories }}</strong> kcal</span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="controls">
+  <div class="wrap">
+    <input type="text" id="search" class="search-input" placeholder="Search by recipe name or ingredient&hellip;">
+
+    <div class="filter-groups">
+      <div class="filter-group">
+        <div class="filter-group-label">Meal Type</div>
+        <div class="chip-row" data-filter-group="meal">
+          {% for m in ["breakfast","lunch","dinner","snack","dessert","side"] %}
+          <button type="button" class="chip" data-value="{{ m }}">{{ m | titleCase }}</button>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="filter-group">
+        <div class="filter-group-label">Diet</div>
+        <div class="chip-row" data-filter-group="diet">
+          {% for d in ["high-protein","low-carb","zero-carb","vegetarian"] %}
+          <button type="button" class="chip" data-value="{{ d }}">{{ d | titleCase }}</button>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="filter-group">
+        <div class="filter-group-label">Calories</div>
+        <div class="chip-row" data-filter-group="band">
+          {% for b in ["under-300","300-500","500-700","700-plus"] %}
+          <button type="button" class="chip" data-value="{{ b }}">{{ b | calorieBandLabel }}</button>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="results-meta" id="results-meta"></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="recipe-grid" id="recipe-grid">
+    {% for recipe in collections.recipes %}
+    {% set r = recipe.data %}
+    <a href="{{ recipe.url }}"
+       class="recipe-card"
+       data-title="{{ r.title | lower }}"
+       data-meal="{{ r.mealType | join(' ') }}"
+       data-diet="{{ r.diet | join(' ') }}"
+       data-style="{{ r.style | join(' ') }}"
+       data-band="{{ r.calories | calorieBand }}">
+      <div class="card-media">
+        {% if r.image %}
+          <img src="{{ r.image }}" alt="{{ r.title }}" loading="lazy">
+        {% else %}
+          <span class="placeholder-mark">VANA</span>
+        {% endif %}
+      </div>
+      <div class="card-body">
+        <div class="card-title">{{ r.title }}</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>{{ r.calories }}</strong> kcal</span>
+          <span class="macro-pill"><strong>{{ r.protein }}g</strong> pro</span>
+          <span class="macro-pill"><strong>{{ r.carbs }}g</strong> carb</span>
+          <span class="macro-pill"><strong>{{ r.fat }}g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          {% for t in r.mealType %}<span class="tag">{{ t | titleCase }}</span>{% endfor %}
+          {% for t in r.diet %}<span class="tag">{{ t | titleCase }}</span>{% endfor %}
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="no-results" id="no-results" style="display:none;">
+    No recipes match those filters yet &mdash; try clearing a filter or searching a different ingredient.
+  </div>
+</section>
+
+<script src="/js/filter.js"></script>

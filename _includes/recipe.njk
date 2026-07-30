@@ -1,0 +1,51 @@
+---
+layout: base.njk
+---
+{% if image %}
+<div class="recipe-banner"><img src="{{ image }}" alt="{{ title }}"></div>
+{% endif %}
+<section class="recipe-hero">
+  <div class="wrap">
+    <a href="/" class="back-link">&larr; All Recipes</a>
+    <div class="eyebrow">
+      {% if mealType and mealType.length %}{{ mealType[0] | titleCase }}{% endif %}
+      {% if style and style.length %} &middot; {{ style[0] | titleCase }}{% endif %}
+    </div>
+    <h1>{{ title }}</h1>
+    <div class="serving-note">
+      {% if servingNote %}{{ servingNote }}{% else %}Serves {{ servings }}{% endif %}
+    </div>
+
+    <div class="macro-band">
+      <div class="macro-cell"><div class="value">{{ calories }}</div><div class="label">Kcal</div></div>
+      <div class="macro-cell"><div class="value">{{ protein }}g</div><div class="label">Protein</div></div>
+      <div class="macro-cell"><div class="value">{{ carbs }}g</div><div class="label">Carbs</div></div>
+      <div class="macro-cell"><div class="value">{{ fat }}g</div><div class="label">Fat</div></div>
+    </div>
+
+    <div class="tag-row" style="margin-top:20px;">
+      {% for t in mealType %}<span class="tag">{{ t | titleCase }}</span>{% endfor %}
+      {% for t in diet %}<span class="tag">{{ t | titleCase }}</span>{% endfor %}
+      {% for t in style %}<span class="tag">{{ t | titleCase }}</span>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="recipe-body wrap">
+  <div class="ingredients-col">
+    <div class="section-title">Ingredients</div>
+    <ul class="ingredient-list">
+      {% for item in ingredients %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </div>
+  <div class="method-col">
+    <div class="section-title">Method</div>
+    <ol class="method-list">
+      {% for step in method %}<li>{{ step }}</li>{% endfor %}
+    </ol>
+
+    {% if tip %}
+    <div class="tip-box"><strong>Top Tip:</strong> {{ tip }}</div>
+    {% endif %}
+  </div>
+</section>

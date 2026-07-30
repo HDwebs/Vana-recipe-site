@@ -1,0 +1,12 @@
+{
+  "name": "vana-recipes",
+  "version": "1.0.0",
+  "description": "VANA Health & Performance — client recipe library",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

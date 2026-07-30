@@ -1,0 +1,52 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: simple
+media_folder: "assets/recipe-photos"
+public_folder: "/assets/recipe-photos"
+
+collections:
+  - name: "recipes"
+    label: "Recipes"
+    folder: "content/recipes"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} — {{calories}} kcal"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "Lowercase, hyphens only, must be unique — this sets the recipe's URL." }
+      - label: "Meal Type"
+        name: "mealType"
+        widget: "select"
+        multiple: true
+        options: ["breakfast", "lunch", "dinner", "snack", "dessert", "side"]
+      - label: "Diet"
+        name: "diet"
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["high-protein", "low-carb", "zero-carb", "vegetarian"]
+      - label: "Style / Cuisine"
+        name: "style"
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["beef", "chicken", "seafood", "eggs", "pasta", "bread", "shake", "salad", "fakeaway", "mexican", "indian", "italian", "asian"]
+      - { label: "Servings", name: "servings", widget: "number", valueType: "int", default: 1 }
+      - { label: "Serving Note (optional — overrides the default 'Serves X' text)", name: "servingNote", widget: "string", required: false }
+      - { label: "Calories (per serving)", name: "calories", widget: "number", valueType: "int" }
+      - { label: "Protein (g)", name: "protein", widget: "number", valueType: "int" }
+      - { label: "Carbohydrates (g)", name: "carbs", widget: "number", valueType: "int" }
+      - { label: "Fat (g)", name: "fat", widget: "number", valueType: "int" }
+      - { label: "Photo", name: "image", widget: "image", required: false }
+      - label: "Ingredients"
+        name: "ingredients"
+        widget: "list"
+        field: { label: "Ingredient", name: "item", widget: "string" }
+      - label: "Method"
+        name: "method"
+        widget: "list"
+        field: { label: "Step", name: "step", widget: "string" }
+      - { label: "Top Tip (optional)", name: "tip", widget: "string", required: false }

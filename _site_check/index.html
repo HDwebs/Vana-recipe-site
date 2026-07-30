@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VANA Recipe Library</title>
+  <meta name="description" content="The VANA Health &amp; Performance recipe library — member-only.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="/assets/vana-logo-black.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand">
+        <img src="/assets/vana-logo-colour.png" alt="VANA">
+        <span class="brand-sub">Recipe Library</span>
+      </a>
+      <nav class="header-actions">
+        <a href="/">All Recipes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+  <div class="wrap">
+    <h1><span class="gradient-text">Recipe</span> Library</h1>
+    <p>Search and filter the VANA recipe collection by meal type, diet, and calories.</p>
+  </div>
+</section>
+
+<section class="controls">
+  <div class="wrap">
+    <input type="text" id="search" class="search-input" placeholder="Search by recipe name or ingredient&hellip;">
+
+    <div class="filter-groups">
+      <div class="filter-group">
+        <div class="filter-group-label">Meal Type</div>
+        <div class="chip-row" data-filter-group="meal">
+          
+          <button type="button" class="chip" data-value="breakfast">Breakfast</button>
+          
+          <button type="button" class="chip" data-value="lunch">Lunch</button>
+          
+          <button type="button" class="chip" data-value="dinner">Dinner</button>
+          
+          <button type="button" class="chip" data-value="snack">Snack</button>
+          
+          <button type="button" class="chip" data-value="dessert">Dessert</button>
+          
+          <button type="button" class="chip" data-value="side">Side</button>
+          
+        </div>
+      </div>
+      <div class="filter-group">
+        <div class="filter-group-label">Diet</div>
+        <div class="chip-row" data-filter-group="diet">
+          
+          <button type="button" class="chip" data-value="high-protein">High Protein</button>
+          
+          <button type="button" class="chip" data-value="low-carb">Low Carb</button>
+          
+          <button type="button" class="chip" data-value="zero-carb">Zero Carb</button>
+          
+          <button type="button" class="chip" data-value="vegetarian">Vegetarian</button>
+          
+        </div>
+      </div>
+      <div class="filter-group">
+        <div class="filter-group-label">Calories</div>
+        <div class="chip-row" data-filter-group="band">
+          
+          <button type="button" class="chip" data-value="under-300">Under 300 kcal</button>
+          
+          <button type="button" class="chip" data-value="300-500">300–500 kcal</button>
+          
+          <button type="button" class="chip" data-value="500-700">500–700 kcal</button>
+          
+          <button type="button" class="chip" data-value="700-plus">700+ kcal</button>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="results-meta" id="results-meta"></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="recipe-grid" id="recipe-grid">
+    
+    
+    <a href="/recipes/breakfast-burrito/"
+       class="recipe-card"
+       data-title="breakfast burrito"
+       data-meal="breakfast"
+       data-diet="high-protein"
+       data-style="mexican"
+       data-band="500-700">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1711488735428-27c6757beb5c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Breakfast Burrito" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Breakfast Burrito</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>535</strong> kcal</span>
+          <span class="macro-pill"><strong>55g</strong> pro</span>
+          <span class="macro-pill"><strong>39g</strong> carb</span>
+          <span class="macro-pill"><strong>18g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Breakfast</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/breakfast-egg-muffin/"
+       class="recipe-card"
+       data-title="breakfast egg muffin"
+       data-meal="breakfast"
+       data-diet="low-carb"
+       data-style="eggs"
+       data-band="under-300">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1642463045543-55998f3174fc?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Breakfast Egg Muffin" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Breakfast Egg Muffin</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>129</strong> kcal</span>
+          <span class="macro-pill"><strong>10g</strong> pro</span>
+          <span class="macro-pill"><strong>1g</strong> carb</span>
+          <span class="macro-pill"><strong>10g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Breakfast</span>
+          <span class="tag">Low Carb</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/breakfast-muffin/"
+       class="recipe-card"
+       data-title="breakfast muffin"
+       data-meal="breakfast"
+       data-diet="high-protein"
+       data-style="fakeaway eggs"
+       data-band="300-500">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1528736235302-52922df5c122?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Breakfast Muffin" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Breakfast Muffin</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>481</strong> kcal</span>
+          <span class="macro-pill"><strong>30g</strong> pro</span>
+          <span class="macro-pill"><strong>26g</strong> carb</span>
+          <span class="macro-pill"><strong>29g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Breakfast</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/carpese-frittata/"
+       class="recipe-card"
+       data-title="carpese frittata"
+       data-meal="breakfast lunch"
+       data-diet="low-carb"
+       data-style="eggs"
+       data-band="under-300">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1673960729830-76830e8b3db4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Carpese Frittata" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Carpese Frittata</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>212</strong> kcal</span>
+          <span class="macro-pill"><strong>18g</strong> pro</span>
+          <span class="macro-pill"><strong>4g</strong> carb</span>
+          <span class="macro-pill"><strong>16g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Breakfast</span><span class="tag">Lunch</span>
+          <span class="tag">Low Carb</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/carrot-cake-protein-porridge/"
+       class="recipe-card"
+       data-title="carrot cake protein porridge"
+       data-meal="breakfast"
+       data-diet="high-protein"
+       data-style=""
+       data-band="300-500">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1702648982253-8b851013e81f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Carrot Cake Protein Porridge" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Carrot Cake Protein Porridge</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>456</strong> kcal</span>
+          <span class="macro-pill"><strong>29g</strong> pro</span>
+          <span class="macro-pill"><strong>49g</strong> carb</span>
+          <span class="macro-pill"><strong>13g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Breakfast</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/cheesecake-berry-pudding/"
+       class="recipe-card"
+       data-title="cheesecake berry pudding"
+       data-meal="dessert"
+       data-diet="high-protein"
+       data-style=""
+       data-band="300-500">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1565788049436-bc97046eff42?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Cheesecake Berry Pudding" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Cheesecake Berry Pudding</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>444</strong> kcal</span>
+          <span class="macro-pill"><strong>44g</strong> pro</span>
+          <span class="macro-pill"><strong>24g</strong> carb</span>
+          <span class="macro-pill"><strong>20g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Dessert</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/chicken-carbonara/"
+       class="recipe-card"
+       data-title="chicken carbonara"
+       data-meal="dinner"
+       data-diet="high-protein"
+       data-style="pasta chicken italian"
+       data-band="500-700">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1608219992759-8d74ed8d76eb?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Chicken Carbonara" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Chicken Carbonara</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>612</strong> kcal</span>
+          <span class="macro-pill"><strong>47g</strong> pro</span>
+          <span class="macro-pill"><strong>60g</strong> carb</span>
+          <span class="macro-pill"><strong>20g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Dinner</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/coconut-protein-bites/"
+       class="recipe-card"
+       data-title="coconut protein bites"
+       data-meal="snack"
+       data-diet=""
+       data-style=""
+       data-band="under-300">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1596723455658-72ebb0d12edd?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Coconut Protein Bites" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Coconut Protein Bites</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>99</strong> kcal</span>
+          <span class="macro-pill"><strong>6g</strong> pro</span>
+          <span class="macro-pill"><strong>5g</strong> carb</span>
+          <span class="macro-pill"><strong>6g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Snack</span>
+          
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/cous-cous-salad/"
+       class="recipe-card"
+       data-title="cous cous salad"
+       data-meal="lunch"
+       data-diet="vegetarian"
+       data-style="salad"
+       data-band="300-500">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1754652327512-3a4166c84cce?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Cous Cous Salad" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Cous Cous Salad</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>414</strong> kcal</span>
+          <span class="macro-pill"><strong>17g</strong> pro</span>
+          <span class="macro-pill"><strong>51g</strong> carb</span>
+          <span class="macro-pill"><strong>18g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Lunch</span>
+          <span class="tag">Vegetarian</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/open-face-breakfast-sandwich/"
+       class="recipe-card"
+       data-title="open face breakfast sandwich"
+       data-meal="breakfast"
+       data-diet=""
+       data-style="eggs"
+       data-band="under-300">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Open Face Breakfast Sandwich" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Open Face Breakfast Sandwich</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>194</strong> kcal</span>
+          <span class="macro-pill"><strong>11g</strong> pro</span>
+          <span class="macro-pill"><strong>15g</strong> carb</span>
+          <span class="macro-pill"><strong>9g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Breakfast</span>
+          
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/oreo-milkshake/"
+       class="recipe-card"
+       data-title="oreo milkshake"
+       data-meal="snack dessert"
+       data-diet="high-protein"
+       data-style="shake"
+       data-band="300-500">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Oreo Milkshake" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Oreo Milkshake</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>493</strong> kcal</span>
+          <span class="macro-pill"><strong>45g</strong> pro</span>
+          <span class="macro-pill"><strong>46g</strong> carb</span>
+          <span class="macro-pill"><strong>9g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Snack</span><span class="tag">Dessert</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/prawn-stir-fry/"
+       class="recipe-card"
+       data-title="prawn stir fry"
+       data-meal="dinner"
+       data-diet="high-protein"
+       data-style="seafood asian"
+       data-band="500-700">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1717072355019-7d993397d0a4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Prawn Stir Fry" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Prawn Stir Fry</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>652</strong> kcal</span>
+          <span class="macro-pill"><strong>73g</strong> pro</span>
+          <span class="macro-pill"><strong>105g</strong> carb</span>
+          <span class="macro-pill"><strong>11g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Dinner</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/protein-pancakes-1-0/"
+       class="recipe-card"
+       data-title="protein pancakes 1.0"
+       data-meal="breakfast"
+       data-diet="high-protein"
+       data-style=""
+       data-band="300-500">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Protein Pancakes 1.0" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Protein Pancakes 1.0</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>463</strong> kcal</span>
+          <span class="macro-pill"><strong>52g</strong> pro</span>
+          <span class="macro-pill"><strong>40g</strong> carb</span>
+          <span class="macro-pill"><strong>8g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Breakfast</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/pulled-chicken-in-slow-roasted-tomatoes/"
+       class="recipe-card"
+       data-title="pulled chicken in slow roasted tomatoes"
+       data-meal="dinner"
+       data-diet="high-protein low-carb"
+       data-style="chicken"
+       data-band="300-500">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1748864221145-269b4a23a67e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Pulled Chicken in Slow Roasted Tomatoes" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Pulled Chicken in Slow Roasted Tomatoes</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>400</strong> kcal</span>
+          <span class="macro-pill"><strong>47g</strong> pro</span>
+          <span class="macro-pill"><strong>13g</strong> carb</span>
+          <span class="macro-pill"><strong>17g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Dinner</span>
+          <span class="tag">High Protein</span><span class="tag">Low Carb</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/quick-easy-naan-bread/"
+       class="recipe-card"
+       data-title="quick &amp; easy naan bread"
+       data-meal="side"
+       data-diet=""
+       data-style="bread indian"
+       data-band="under-300">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1640625314547-aee9a7696589?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Quick &amp; Easy Naan Bread" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Quick &amp; Easy Naan Bread</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>265</strong> kcal</span>
+          <span class="macro-pill"><strong>6g</strong> pro</span>
+          <span class="macro-pill"><strong>42g</strong> carb</span>
+          <span class="macro-pill"><strong>8g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Side</span>
+          
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/raspberry-protein-roulade/"
+       class="recipe-card"
+       data-title="raspberry protein roulade"
+       data-meal="dessert"
+       data-diet="high-protein"
+       data-style=""
+       data-band="under-300">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1762160964274-0aa385e887d7?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Raspberry Protein Roulade" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Raspberry Protein Roulade</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>289</strong> kcal</span>
+          <span class="macro-pill"><strong>32g</strong> pro</span>
+          <span class="macro-pill"><strong>16g</strong> carb</span>
+          <span class="macro-pill"><strong>11g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Dessert</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/red-pesto-meatball-pasta/"
+       class="recipe-card"
+       data-title="red pesto meatball pasta"
+       data-meal="dinner"
+       data-diet="high-protein"
+       data-style="pasta beef italian"
+       data-band="500-700">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1632808664408-f8ab196b0523?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Red Pesto Meatball Pasta" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Red Pesto Meatball Pasta</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>594</strong> kcal</span>
+          <span class="macro-pill"><strong>42g</strong> pro</span>
+          <span class="macro-pill"><strong>56g</strong> carb</span>
+          <span class="macro-pill"><strong>22g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Dinner</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/sirloin-steak-salad/"
+       class="recipe-card"
+       data-title="sirloin steak salad"
+       data-meal="dinner"
+       data-diet="high-protein low-carb zero-carb"
+       data-style="beef salad"
+       data-band="300-500">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1676300185579-ed2b14891d82?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Sirloin Steak Salad" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Sirloin Steak Salad</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>391</strong> kcal</span>
+          <span class="macro-pill"><strong>62g</strong> pro</span>
+          <span class="macro-pill"><strong>0g</strong> carb</span>
+          <span class="macro-pill"><strong>17g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Dinner</span>
+          <span class="tag">High Protein</span><span class="tag">Low Carb</span><span class="tag">Zero Carb</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/smashburger-with-mash-cheese-pickles/"
+       class="recipe-card"
+       data-title="smashburger with mash, cheese &amp; pickles"
+       data-meal="dinner"
+       data-diet="high-protein"
+       data-style="beef fakeaway"
+       data-band="300-500">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Smashburger with Mash, Cheese &amp; Pickles" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Smashburger with Mash, Cheese &amp; Pickles</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>497</strong> kcal</span>
+          <span class="macro-pill"><strong>32g</strong> pro</span>
+          <span class="macro-pill"><strong>45g</strong> carb</span>
+          <span class="macro-pill"><strong>21g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Dinner</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/sweet-potato-fajitas/"
+       class="recipe-card"
+       data-title="sweet potato fajitas"
+       data-meal="dinner"
+       data-diet="vegetarian"
+       data-style="mexican"
+       data-band="300-500">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1636044990323-bde911334c5f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Sweet Potato Fajitas" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">Sweet Potato Fajitas</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>488</strong> kcal</span>
+          <span class="macro-pill"><strong>12g</strong> pro</span>
+          <span class="macro-pill"><strong>87g</strong> carb</span>
+          <span class="macro-pill"><strong>13g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Dinner</span>
+          <span class="tag">Vegetarian</span>
+        </div>
+      </div>
+    </a>
+    
+    
+    <a href="/recipes/the-cook-up/"
+       class="recipe-card"
+       data-title="the cook up"
+       data-meal="breakfast"
+       data-diet="high-protein"
+       data-style="eggs"
+       data-band="500-700">
+      <div class="card-media">
+        
+          <img src="https://images.unsplash.com/photo-1541329351076-600b0f9fdf28?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="The Cook Up" loading="lazy">
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title">The Cook Up</div>
+        <div class="macro-row">
+          <span class="macro-pill"><strong>570</strong> kcal</span>
+          <span class="macro-pill"><strong>50g</strong> pro</span>
+          <span class="macro-pill"><strong>42g</strong> carb</span>
+          <span class="macro-pill"><strong>9g</strong> fat</span>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Breakfast</span>
+          <span class="tag">High Protein</span>
+        </div>
+      </div>
+    </a>
+    
+  </div>
+  <div class="no-results" id="no-results" style="display:none;">
+    No recipes match those filters yet &mdash; try clearing a filter or searching a different ingredient.
+  </div>
+</section>
+
+<script src="/js/filter.js"></script>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:10px;">
+      <span>&copy; 2026 VANA Health &amp; Performance</span>
+      <span>Members only &mdash; not for distribution</span>
+    </div>
+  </footer>
+</body>
+</html>
