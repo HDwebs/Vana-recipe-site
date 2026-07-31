@@ -21,6 +21,9 @@
       </a>
       <nav class="header-actions">
         <a href="/">All Recipes</a>
+        <button type="button" id="shopping-list-toggle" class="header-list-btn">
+          Shopping List <span id="shopping-list-count" class="header-list-count">0</span>
+        </button>
       </nav>
     </div>
   </header>
@@ -35,5 +38,24 @@
       <span>Members only &mdash; not for distribution</span>
     </div>
   </footer>
+
+  <div id="shopping-list-overlay" class="slide-overlay" hidden></div>
+  <aside id="shopping-list-panel" class="slide-panel" hidden aria-label="Shopping list">
+    <div class="slide-panel-head">
+      <div class="section-title" style="margin-bottom:0;">Shopping List</div>
+      <button type="button" id="shopping-list-close" class="icon-close" aria-label="Close">&times;</button>
+    </div>
+    <div id="shopping-list-body" class="slide-panel-body"></div>
+    <div class="slide-panel-actions">
+      <button type="button" id="shopping-list-copy" class="ghost-btn">Copy List</button>
+      <button type="button" id="shopping-list-print" class="ghost-btn">Print</button>
+      <button type="button" id="shopping-list-clear" class="ghost-btn ghost-btn-danger">Clear All</button>
+    </div>
+  </aside>
+
+  <script>
+    window.VANA_RECIPES = {{ collections.recipes | recipeIndex | json | safe }};
+  </script>
+  <script src="/js/lists.js"></script>
 </body>
 </html>

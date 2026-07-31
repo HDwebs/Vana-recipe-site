@@ -11,7 +11,17 @@ layout: base.njk
       {% if mealType and mealType.length %}{{ mealType[0] | titleCase }}{% endif %}
       {% if style and style.length %} &middot; {{ style[0] | titleCase }}{% endif %}
     </div>
-    <h1>{{ title }}</h1>
+    <div class="recipe-title-row">
+      <h1>{{ title }}</h1>
+      <div class="recipe-action-row">
+        <button type="button" class="action-btn" data-fav-toggle data-slug="{{ slug }}">
+          <span class="action-btn-icon">&#9733;</span> Favourite
+        </button>
+        <button type="button" class="action-btn" data-cart-toggle data-slug="{{ slug }}">
+          <span class="action-btn-icon">&#128722;</span> Add to Shopping List
+        </button>
+      </div>
+    </div>
     <div class="serving-note">
       {% if servingNote %}{{ servingNote }}{% else %}Serves {{ servings }}{% endif %}
     </div>

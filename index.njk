@@ -88,6 +88,30 @@ title: VANA Recipe Library
           {% endfor %}
         </div>
       </div>
+      <div class="filter-group">
+        <div class="filter-group-label">Your List</div>
+        <div class="chip-row">
+          <button type="button" class="chip" id="favourites-toggle" data-value="favourites">&#9733; Favourites Only</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="target-filter">
+      <div class="filter-group-label">Fits Your Target</div>
+      <div class="target-filter-row">
+        <label class="target-field">
+          <span>Target calories</span>
+          <input type="number" id="target-calories" placeholder="e.g. 500" min="0" inputmode="numeric">
+        </label>
+        <label class="target-field">
+          <span>Tolerance (&plusmn;kcal)</span>
+          <input type="number" id="target-tolerance" value="100" min="0" inputmode="numeric">
+        </label>
+        <label class="target-field">
+          <span>Min. protein (g)</span>
+          <input type="number" id="target-protein" placeholder="e.g. 40" min="0" inputmode="numeric">
+        </label>
+      </div>
     </div>
 
     <div class="results-meta" id="results-meta"></div>
@@ -104,13 +128,20 @@ title: VANA Recipe Library
        data-meal="{{ r.mealType | join(' ') }}"
        data-diet="{{ r.diet | join(' ') }}"
        data-style="{{ r.style | join(' ') }}"
-       data-band="{{ r.calories | calorieBand }}">
+       data-band="{{ r.calories | calorieBand }}"
+       data-slug="{{ r.slug }}"
+       data-calories="{{ r.calories }}"
+       data-protein="{{ r.protein }}">
       <div class="card-media">
         {% if r.image %}
           <img src="{{ r.image }}" alt="{{ r.title }}" loading="lazy">
         {% else %}
           <span class="placeholder-mark">VANA</span>
         {% endif %}
+        <div class="card-icon-row">
+          <button type="button" class="icon-btn" data-fav-toggle data-slug="{{ r.slug }}" aria-label="Favourite">&#9733;</button>
+          <button type="button" class="icon-btn" data-cart-toggle data-slug="{{ r.slug }}" aria-label="Add to shopping list">&#128722;</button>
+        </div>
       </div>
       <div class="card-body">
         <div class="card-title">{{ r.title }}</div>

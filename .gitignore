@@ -2,4 +2,6 @@ node_modules/
 _site*/
 render*/
 unpacked_check/
+smoke_test*.js
+smoke_debug.js
 .DS_Store

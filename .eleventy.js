@@ -55,6 +55,17 @@ module.exports = function (eleventyConfig) {
     return JSON.stringify(obj);
   });
 
+  eleventyConfig.addFilter("recipeIndex", function (collection) {
+    return (collection || []).map((item) => ({
+      slug: item.data.slug,
+      title: item.data.title,
+      url: item.url,
+      calories: item.data.calories,
+      protein: item.data.protein,
+      ingredients: item.data.ingredients || [],
+    }));
+  });
+
   return {
     dir: {
       input: ".",
