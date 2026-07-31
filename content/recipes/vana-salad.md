@@ -18,7 +18,7 @@ carbs: 10.7
 fat: 30.3
 image: "https://images.unsplash.com/photo-1547496502-affa22d38842?auto=format&fit=crop&w=1200&q=80"
 ingredients:
-  - "Cold pressed extra virgin olive oil (e.g. Coles) — 15ml"
+  - "Extra virgin olive oil — 15ml"
   - "Rocket — 100g"
   - "Spinach — 100g"
   - "Cucumber — 100g"

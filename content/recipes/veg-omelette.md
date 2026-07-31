@@ -12,7 +12,7 @@ diet:
 style:
   - "eggs"
 servings: 1
-calories: 295
+calories: 294
 protein: 32
 carbs: 6
 fat: 16
