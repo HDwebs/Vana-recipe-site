@@ -15,7 +15,7 @@ calories: 368
 protein: 30.5
 carbs: 23
 fat: 13.8
-image: ""
+image: "https://images.unsplash.com/photo-1728389617819-cddee5310e35?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "Total 0% Greek yogurt (Fage) — 250g"
   - "Raspberries — 100g"

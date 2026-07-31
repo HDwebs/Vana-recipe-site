@@ -15,7 +15,7 @@ calories: 666
 protein: 45
 carbs: 49.3
 fat: 32.2
-image: ""
+image: "https://images.unsplash.com/photo-1579619002916-88cd4c81a70c?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "Chicken breast fillets (e.g. Sainsbury's) — 100g"
   - "Thai jasmine rice (e.g. Veetee) — 140g"

@@ -15,7 +15,7 @@ calories: 494
 protein: 45.3
 carbs: 28.2
 fat: 21.9
-image: ""
+image: "https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "Almond butter — 30g"
   - "Ceylon cinnamon, ground — 5g"

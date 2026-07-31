@@ -16,7 +16,7 @@ calories: 364
 protein: 8.7
 carbs: 10.7
 fat: 30.3
-image: ""
+image: "https://images.unsplash.com/photo-1547496502-affa22d38842?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "Cold pressed extra virgin olive oil (e.g. Coles) — 15ml"
   - "Rocket — 100g"

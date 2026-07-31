@@ -16,7 +16,7 @@ calories: 295
 protein: 32
 carbs: 6
 fat: 16
-image: ""
+image: "https://images.unsplash.com/photo-1677844592730-ce9c936d8f1a?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "Egg white (e.g. Two Chicks) — 10 tbsp"
   - "Whole egg (e.g. Burford Brown, Clarence Court) — 1"

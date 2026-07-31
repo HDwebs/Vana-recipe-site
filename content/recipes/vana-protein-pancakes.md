@@ -15,7 +15,7 @@ calories: 341
 protein: 31.7
 carbs: 40.8
 fat: 5.5
-image: ""
+image: "https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "Dymatize ISO 100 Hydrolysed Whey — 1 scoop"
   - "Banana — 1 medium"
