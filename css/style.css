@@ -227,10 +227,13 @@ h1, h2, h3, .display {
 .controls {
   padding: 28px 0;
   border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 66px;
   background: var(--black);
-  z-index: 40;
+}
+.filters-toggle-btn {
+  display: none;
+}
+.filters-panel {
+  margin-top: 4px;
 }
 .search-input {
   width: 100%;
@@ -322,6 +325,42 @@ h1, h2, h3, .display {
   font-family: inherit;
 }
 .target-field input:focus { outline: none; border-color: var(--orange-1); }
+
+/* Desktop: filters panel always visible regardless of collapsed state */
+@media (min-width: 761px) {
+  .filters-panel[hidden] { display: block !important; }
+}
+
+/* Mobile: filters tuck behind a toggle so they don't eat the whole screen */
+@media (max-width: 760px) {
+  .filters-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    width: 100%;
+    justify-content: center;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--white);
+    font-size: 13px;
+    font-family: inherit;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .filters-toggle-btn:hover { border-color: var(--orange-2); }
+  .filters-toggle-btn[aria-expanded="true"] {
+    background: var(--gradient);
+    border-color: transparent;
+    color: var(--black);
+    font-weight: 600;
+  }
+  .target-filter-row { flex-direction: column; }
+  .target-field input { width: 100%; }
+}
 
 /* Grid */
 .recipe-grid {

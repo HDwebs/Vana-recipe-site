@@ -9,6 +9,23 @@ document.addEventListener("DOMContentLoaded", function () {
   var targetCalories = document.getElementById("target-calories");
   var targetTolerance = document.getElementById("target-tolerance");
   var targetProtein = document.getElementById("target-protein");
+  var filtersToggle = document.getElementById("filters-toggle");
+  var filtersPanel = document.getElementById("filters-panel");
+
+  if (filtersToggle && filtersPanel) {
+    filtersToggle.addEventListener("click", function () {
+      var open = filtersPanel.hasAttribute("hidden");
+      if (open) {
+        filtersPanel.removeAttribute("hidden");
+        filtersToggle.textContent = "Hide Filters";
+        filtersToggle.setAttribute("aria-expanded", "true");
+      } else {
+        filtersPanel.setAttribute("hidden", "");
+        filtersToggle.textContent = "Show Filters";
+        filtersToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 
   var active = { meal: new Set(), diet: new Set(), band: new Set() };
   var favouritesOnly = false;

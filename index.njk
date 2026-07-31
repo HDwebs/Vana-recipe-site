@@ -63,54 +63,58 @@ title: VANA Recipe Library
   <div class="wrap">
     <input type="text" id="search" class="search-input" placeholder="Search by recipe name or ingredient&hellip;">
 
-    <div class="filter-groups">
-      <div class="filter-group">
-        <div class="filter-group-label">Meal Type</div>
-        <div class="chip-row" data-filter-group="meal">
-          {% for m in ["breakfast","lunch","dinner","snack","dessert","side"] %}
-          <button type="button" class="chip" data-value="{{ m }}">{{ m | titleCase }}</button>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="filter-group">
-        <div class="filter-group-label">Diet</div>
-        <div class="chip-row" data-filter-group="diet">
-          {% for d in ["high-protein","low-carb","zero-carb","vegetarian"] %}
-          <button type="button" class="chip" data-value="{{ d }}">{{ d | titleCase }}</button>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="filter-group">
-        <div class="filter-group-label">Calories</div>
-        <div class="chip-row" data-filter-group="band">
-          {% for b in ["under-300","300-500","500-700","700-plus"] %}
-          <button type="button" class="chip" data-value="{{ b }}">{{ b | calorieBandLabel }}</button>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="filter-group">
-        <div class="filter-group-label">Your List</div>
-        <div class="chip-row">
-          <button type="button" class="chip" id="favourites-toggle" data-value="favourites">&#9733; Favourites Only</button>
-        </div>
-      </div>
-    </div>
+    <button type="button" id="filters-toggle" class="filters-toggle-btn" aria-expanded="false">Show Filters</button>
 
-    <div class="target-filter">
-      <div class="filter-group-label">Fits Your Target</div>
-      <div class="target-filter-row">
-        <label class="target-field">
-          <span>Target calories</span>
-          <input type="number" id="target-calories" placeholder="e.g. 500" min="0" inputmode="numeric">
-        </label>
-        <label class="target-field">
-          <span>Tolerance (&plusmn;kcal)</span>
-          <input type="number" id="target-tolerance" value="100" min="0" inputmode="numeric">
-        </label>
-        <label class="target-field">
-          <span>Min. protein (g)</span>
-          <input type="number" id="target-protein" placeholder="e.g. 40" min="0" inputmode="numeric">
-        </label>
+    <div class="filters-panel" id="filters-panel" hidden>
+      <div class="filter-groups">
+        <div class="filter-group">
+          <div class="filter-group-label">Meal Type</div>
+          <div class="chip-row" data-filter-group="meal">
+            {% for m in ["breakfast","lunch","dinner","snack","dessert","side"] %}
+            <button type="button" class="chip" data-value="{{ m }}">{{ m | titleCase }}</button>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-group-label">Diet</div>
+          <div class="chip-row" data-filter-group="diet">
+            {% for d in ["high-protein","low-carb","zero-carb","vegetarian"] %}
+            <button type="button" class="chip" data-value="{{ d }}">{{ d | titleCase }}</button>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-group-label">Calories</div>
+          <div class="chip-row" data-filter-group="band">
+            {% for b in ["under-300","300-500","500-700","700-plus"] %}
+            <button type="button" class="chip" data-value="{{ b }}">{{ b | calorieBandLabel }}</button>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-group-label">Your List</div>
+          <div class="chip-row">
+            <button type="button" class="chip" id="favourites-toggle" data-value="favourites">&#9733; Favourites Only</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="target-filter">
+        <div class="filter-group-label">Fits Your Target</div>
+        <div class="target-filter-row">
+          <label class="target-field">
+            <span>Target calories</span>
+            <input type="number" id="target-calories" placeholder="e.g. 500" min="0" inputmode="numeric">
+          </label>
+          <label class="target-field">
+            <span>Tolerance (&plusmn;kcal)</span>
+            <input type="number" id="target-tolerance" value="100" min="0" inputmode="numeric">
+          </label>
+          <label class="target-field">
+            <span>Min. protein (g)</span>
+            <input type="number" id="target-protein" placeholder="e.g. 40" min="0" inputmode="numeric">
+          </label>
+        </div>
       </div>
     </div>
 
