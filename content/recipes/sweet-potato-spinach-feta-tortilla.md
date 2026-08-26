@@ -15,7 +15,7 @@ calories: 675
 protein: 33
 carbs: 49
 fat: 39
-image: ""
+image: "https://images.unsplash.com/photo-1639669794539-952631b44515?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "3 large sweet potatoes"
   - "100g baby spinach"

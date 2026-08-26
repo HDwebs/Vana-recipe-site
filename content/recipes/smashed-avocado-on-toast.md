@@ -15,7 +15,7 @@ calories: 520
 protein: 10
 carbs: 58
 fat: 33
-image: ""
+image: "https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "1 avocado"
   - "½ lemon"

@@ -14,7 +14,7 @@ calories: 411
 protein: 15
 carbs: 58
 fat: 16
-image: ""
+image: "https://images.unsplash.com/photo-1505281036624-fac2862357b8?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "60g block halloumi, cut into 4 slices"
   - "2 large slices fresh pineapple"

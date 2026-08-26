@@ -14,7 +14,7 @@ calories: 277
 protein: 22
 carbs: 25
 fat: 12
-image: ""
+image: "https://images.unsplash.com/photo-1601702538934-efffab67ab65?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "2 skinless cod fillets"
   - "1 small mango, peeled and chopped"

@@ -17,7 +17,7 @@ calories: 220
 protein: 15
 carbs: 7
 fat: 16
-image: ""
+image: "https://images.unsplash.com/photo-1518310532637-f5225f94f3c3?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "1 tbsp oil"
   - "150g broccoli, chopped"

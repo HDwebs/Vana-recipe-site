@@ -17,7 +17,7 @@ calories: 370
 protein: 45
 carbs: 7
 fat: 20
-image: ""
+image: "https://images.unsplash.com/photo-1755811248299-7a6867dc163d?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "2½ tbsp olive oil"
   - "2 tuna steaks (about 140g each)"

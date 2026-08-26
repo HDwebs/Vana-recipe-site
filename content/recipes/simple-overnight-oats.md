@@ -14,7 +14,7 @@ calories: 300
 protein: 7.5
 carbs: 55
 fat: 6
-image: ""
+image: "https://images.unsplash.com/photo-1610441009633-b6ca9c6d4be2?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "¼ tsp ground cinnamon"
   - "50g porridge oats"

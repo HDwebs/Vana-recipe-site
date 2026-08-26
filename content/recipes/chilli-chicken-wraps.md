@@ -14,7 +14,7 @@ calories: 712
 protein: 44
 carbs: 79
 fat: 24
-image: ""
+image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "4 medium wraps"
   - "2 large skinless chicken breasts, cut into bite-sized pieces"

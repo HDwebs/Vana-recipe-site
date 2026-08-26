@@ -14,7 +14,7 @@ calories: 166
 protein: 6
 carbs: 21
 fat: 8
-image: ""
+image: "https://images.unsplash.com/photo-1616501268826-ee9731c915d4?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "300g celery, sliced (tough strings removed)"
   - "1 garlic clove, peeled"

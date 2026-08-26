@@ -15,7 +15,7 @@ calories: 425
 protein: 22
 carbs: 37
 fat: 24
-image: ""
+image: "https://images.unsplash.com/photo-1662452883375-9226ea22c765?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "125g block halloumi cheese, cut into 4 thick slices"
   - "½ tbsp olive oil"

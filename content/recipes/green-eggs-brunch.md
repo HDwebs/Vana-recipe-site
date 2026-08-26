@@ -17,7 +17,7 @@ calories: 215
 protein: 12
 carbs: 8
 fat: 16
-image: ""
+image: "https://images.unsplash.com/photo-1582169505937-b9992bd01ed9?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "300g spinach"
   - "2 medium eggs"

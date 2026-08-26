@@ -15,7 +15,7 @@ calories: 350
 protein: 14
 carbs: 50
 fat: 10
-image: ""
+image: "https://images.unsplash.com/photo-1597249637214-a85d31f434d6?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "125ml oat milk"
   - "2 eggs, separated"

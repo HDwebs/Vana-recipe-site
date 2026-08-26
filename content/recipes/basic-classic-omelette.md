@@ -16,7 +16,7 @@ calories: 277
 protein: 20
 carbs: 1
 fat: 22
-image: ""
+image: "https://images.unsplash.com/photo-1668283653825-37b80f055b05?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "3 large eggs"
   - "1 tsp butter"

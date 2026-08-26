@@ -14,7 +14,7 @@ calories: 340
 protein: 15
 carbs: 30
 fat: 20
-image: ""
+image: "https://images.unsplash.com/photo-1687276287139-88f7333c8ca4?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "2 tomatoes, halved"
   - "½ tbsp rapeseed oil"

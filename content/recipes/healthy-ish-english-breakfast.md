@@ -15,7 +15,7 @@ calories: 750
 protein: 50
 carbs: 61
 fat: 35
-image: ""
+image: "https://images.unsplash.com/photo-1655979283362-535e6a167a53?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "3 garlic cloves"
   - "2 tbsp rapeseed oil"

@@ -16,7 +16,7 @@ calories: 235
 protein: 16
 carbs: 6
 fat: 17
-image: ""
+image: "https://images.unsplash.com/photo-1746030057235-024daca8b9c7?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "6 baby plum tomatoes, halved"
   - "4 large eggs"

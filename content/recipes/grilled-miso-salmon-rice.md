@@ -14,7 +14,7 @@ calories: 393
 protein: 28
 carbs: 38
 fat: 15
-image: ""
+image: "https://images.unsplash.com/photo-1726802225892-2f93903572f9?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "2 salmon fillets (220g)"
   - "1 tbsp sunflower oil, for greasing"

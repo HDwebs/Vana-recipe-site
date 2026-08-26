@@ -15,7 +15,7 @@ calories: 469
 protein: 41
 carbs: 30
 fat: 21
-image: ""
+image: "https://images.unsplash.com/photo-1556040220-4096d522378d?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "100g rice (nutrition based on brown rice)"
   - "150g frozen peas"

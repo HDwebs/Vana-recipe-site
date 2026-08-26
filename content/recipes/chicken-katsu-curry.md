@@ -15,7 +15,7 @@ calories: 909
 protein: 51
 carbs: 98
 fat: 35
-image: ""
+image: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "For the sauce: 1 tbsp vegetable oil"
   - "2 medium onions, diced"

@@ -16,7 +16,7 @@ calories: 240
 protein: 25
 carbs: 30
 fat: 5
-image: ""
+image: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "1 banana"
   - "1 scoop chocolate protein powder (35g)"

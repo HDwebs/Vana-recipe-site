@@ -14,7 +14,7 @@ calories: 240
 protein: 16
 carbs: 35
 fat: 3.5
-image: ""
+image: "https://images.unsplash.com/photo-1686344234276-dc3ac6f284ff?auto=format&fit=crop&w=1200&q=80"
 ingredients:
   - "50g porridge oats"
   - "100ml 0% fat Greek-style yogurt"
